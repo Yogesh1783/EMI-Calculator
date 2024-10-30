@@ -1,0 +1,21 @@
+.Slider{
+    /* border: 2px solid red; */
+    width: 20%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25%;
+}
+.Range input{
+    /* border: 2px solid red; */
+    width:200px;
+    height: 2px;
+    cursor: pointer;
+
+}
+.Range #range{
+    height: 0.5px;
+}
+

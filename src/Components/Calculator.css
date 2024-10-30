@@ -1,0 +1,242 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+.container {
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden; 
+    background-image: url("../assets/business-861325_1280.jpg");
+
+}
+
+.card1 {
+    /* border: 2px solid red; */
+    width: 450px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 25px;
+    gap: 30px;
+    transition: all 0.3s ease;
+    overflow: hidden; 
+}
+
+.card1 .selection{
+    /* border: 2px solid red; */
+    width: 450px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3%;
+
+}
+.card1 .selection .radio{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.range, .interest, .tenure {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Prevent text overflow */
+}
+
+.range input, .interest input, .tenure input {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ced4da;
+    background-color: #ffffff;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s;
+    padding-top: 10px;
+}
+
+.range input:focus, .interest input:focus, .tenure input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.card2 {
+    width: 550px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding: 25px;
+    transition: all 0.3s ease;
+    overflow: hidden; 
+}
+
+.card2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card2 .left {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden; 
+    word-wrap: break-word; 
+}
+
+.card2 .right {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.right img{
+    /* border:5px solid red; */
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.card2 .left h3 {
+    background: #ffb347;
+    padding: 10px;
+    border-radius: 15px;
+    color: #333;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    overflow-wrap: break-word; 
+}
+
+.card2 .left h3 span {
+    font-size: 24px;
+    font-weight: 800;
+    color: #333;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ddd;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(28px);
+}
+
+p, h4, h3, span {
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+p {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+h3 span {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.card1, .card2 {
+    background-image: linear-gradient(to bottom right, #ffffff, #f2f2f2);
+}
+
+.card1:hover, .card2:hover {
+    background-image: linear-gradient(to bottom right, #ffffff, #e6f7ff);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .card1, .card2 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+.toggle-button{
+    padding: 10px;
+}
